@@ -18,7 +18,7 @@ and open the template in the editor.
             $file->writeFile($filename, "First writing in file");
             $file->readFile($filename);
             $file->appendFile($filename, "First appending in file");
-            $file->readFile($filename);
+            //$file->readFile($filename);
         ?>
     </body>
 </html>

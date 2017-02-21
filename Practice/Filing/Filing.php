@@ -49,6 +49,17 @@ class Filing {
         $fileResource = fopen($filename, 'a');
         fwrite($fileResource, $fileText);
         fclose($fileResource);
+	$count = 1;
+	$readin = file($filename);
+	$readin_count = count($readin);
+
+	foreach ($readin as $line){
+		echo trim($line);
+		if($count < $readin_count){
+			echo ", ";
+		}	
+		$count++;
+	}
     }
 
 }
